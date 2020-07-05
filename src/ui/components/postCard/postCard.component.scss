@@ -1,0 +1,66 @@
+.postCard {
+  width: 80%;
+  min-width: 320px;
+  display: flex;
+  flex-direction: column;
+  border: #8a8a8a 1px solid;
+  border-radius: 5px;
+  padding: 0 8px;
+  background-color: white;
+  cursor: pointer;
+  text-align: left;
+  text-decoration: none;
+  color: #1a1a1b;
+
+  &:visited {
+    color: #9b9b9b;
+  }
+
+  &__meta {
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 16px;
+    display: flex;
+    flex-flow: row nowrap;
+    margin: 8px 8px 0;
+    position: relative;
+    color: rgb(135, 138, 140);
+  }
+
+  &__title {
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 22px;
+    margin: 8px;
+  }
+
+  &__image {
+    align-self: center;
+    max-height: 512px;
+    max-width: 100%;
+    margin: 0px auto;
+  }
+
+  &__interactions {
+    line-height: 1;
+    text-transform: capitalize;
+    vertical-align: middle;
+    font-size: 12px;
+    font-weight: 700;
+    line-height: 16px;
+    padding: 4px;
+    min-width: 25px;
+    white-space: nowrap;
+    word-break: normal;
+    color: rgb(135, 138, 140);
+    display: flex;
+
+    &__interaction {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-right: 4px;
+      padding: 4px;
+    }
+  }
+}

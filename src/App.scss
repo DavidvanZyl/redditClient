@@ -1,0 +1,213 @@
+@font-face {
+  font-family: "redesignFont";
+  src: url(https://www.redditstatic.com/desktop2x/fonts/redesignIcon/redesignFont.d1c072e69095186ee7b1fc23d1cadbca.eot),
+    url(https://www.redditstatic.com/desktop2x/fonts/redesignIcon/redesignFont.d1c072e69095186ee7b1fc23d1cadbca.woff),
+    url(https://www.redditstatic.com/desktop2x/fonts/redesignIcon/redesignFont.d1c072e69095186ee7b1fc23d1cadbca.ttf),
+    url(https://www.redditstatic.com/desktop2x/fonts/redesignIcon/redesignFont.d1c072e69095186ee7b1fc23d1cadbca.svg);
+}
+
+.icon {
+  height: 16px;
+  margin-right: 4px;
+  width: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.icon:before {
+  font-style: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-family: "redesignFont";
+}
+
+.icon-addCollection:before {
+  content: "\f101";
+}
+.icon-addGild:before {
+  content: "\f102";
+}
+.icon-addGildDashed:before {
+  content: "\f103";
+}
+.icon-admin:before {
+  content: "\f104";
+}
+.icon-approve:before {
+  content: "\f105";
+}
+.icon-archived:before {
+  content: "\f106";
+}
+.icon-calendar:before {
+  content: "\f107";
+}
+.icon-chevronCollapse:before {
+  content: "\f108";
+}
+.icon-clear:before {
+  content: "\f109";
+}
+.icon-coin:before {
+  content: "\f10a";
+}
+.icon-collection:before {
+  content: "\f10b";
+}
+.icon-comment:before {
+  content: "\f10c";
+}
+.icon-create:before {
+  content: "\f10d";
+}
+.icon-crosspost:before {
+  content: "\f10e";
+}
+.icon-distinguishShield:before {
+  content: "\f10f";
+}
+.icon-downvote:before {
+  content: "\f110";
+}
+.icon-dropdownTriangle:before {
+  content: "\f111";
+}
+.icon-embed:before {
+  content: "\f112";
+}
+.icon-envelope:before {
+  content: "\f113";
+}
+.icon-expand:before {
+  content: "\f114";
+}
+.icon-expandoArrowCollapse:before {
+  content: "\f115";
+}
+.icon-expandoArrowExpand:before {
+  content: "\f116";
+}
+.icon-expandoMediaGif:before {
+  content: "\f117";
+}
+.icon-expandoMediaImage:before {
+  content: "\f118";
+}
+.icon-expandoMediaLightbox:before {
+  content: "\f119";
+}
+.icon-expandoMediaLink:before {
+  content: "\f11a";
+}
+.icon-expandoMediaText:before {
+  content: "\f11b";
+}
+.icon-expandoMediaVideo:before {
+  content: "\f11c";
+}
+.icon-gif:before {
+  content: "\f11d";
+}
+.icon-gift:before {
+  content: "\f11e";
+}
+.icon-gild:before {
+  content: "\f11f";
+}
+.icon-hide:before {
+  content: "\f120";
+}
+.icon-ignoreReport:before {
+  content: "\f121";
+}
+.icon-info:before {
+  content: "\f122";
+}
+.icon-link:before {
+  content: "\f123";
+}
+.icon-list:before {
+  content: "\f124";
+}
+.icon-live:before {
+  content: "\f125";
+}
+.icon-lock:before {
+  content: "\f126";
+}
+.icon-menu:before {
+  content: "\f127";
+}
+.icon-modActions:before {
+  content: "\f128";
+}
+.icon-modSettings:before {
+  content: "\f129";
+}
+.icon-moderate:before {
+  content: "\f12a";
+}
+.icon-op:before {
+  content: "\f12b";
+}
+.icon-outboundLink:before {
+  content: "\f12c";
+}
+.icon-pencil:before {
+  content: "\f12d";
+}
+.icon-photos:before {
+  content: "\f12e";
+}
+.icon-planet:before {
+  content: "\f12f";
+}
+.icon-plus:before {
+  content: "\f130";
+}
+.icon-premium:before {
+  content: "\f131";
+}
+.icon-promoted:before {
+  content: "\f132";
+}
+.icon-remove:before {
+  content: "\f133";
+}
+.icon-report:before {
+  content: "\f134";
+}
+.icon-save:before {
+  content: "\f135";
+}
+.icon-share:before {
+  content: "\f136";
+}
+.icon-source:before {
+  content: "\f137";
+}
+.icon-spam:before {
+  content: "\f138";
+}
+.icon-sticky:before {
+  content: "\f139";
+}
+.icon-tag:before {
+  content: "\f13a";
+}
+.icon-text:before {
+  content: "\f13b";
+}
+.icon-unpin:before {
+  content: "\f13c";
+}
+.icon-upvote:before {
+  content: "\f13d";
+}
+.icon-video:before {
+  content: "\f13e";
+}
+
+/*# sourceMappingURL=Governance~Reddit.eb0462e552d4a0ca17e0.css.map*/
+/*# sourceMappingURL=Chat~Governance~Reddit.cf134b48dba5ad9d5111.css.map*/

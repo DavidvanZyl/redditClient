@@ -1,0 +1,30 @@
+.Post {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 32px 0;
+
+  & .postCard {
+    margin-bottom: 32px;
+  }
+
+  &__comments {
+    border: #8a8a8a 1px solid;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+    overflow: hidden;
+    padding: 0 8px;
+    background-color: white;
+  }
+
+  &__loader {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+  }
+}

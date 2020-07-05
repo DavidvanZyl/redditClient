@@ -1,0 +1,19 @@
+.InfiniteScrollList {
+  @media (min-width: 960px) {
+    width: 640px;
+  }
+
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  & .postCard {
+    margin-bottom: 16px;
+  }
+}
+
+.Loader,
+.InfiniteScrollList {
+  width: 100%;
+}
