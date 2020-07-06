@@ -2,9 +2,15 @@
 
 This is a read-only reddit client with a minimal UI.
 
-In future: - Restructure (possibly Atomic design) - Better tests and full coverage - Loading times (particularly for Post pages) - Full comment trees and lazy load more similar to posts on Home - Handle various post types (better) - Add header with input/buttons to select other subReddit rather than using URL
+In future:
+    - Restructure (possibly Atomic design)
+    - Better tests and full coverage 
+    - Loading times (particularly for Post pages) 
+    - Full comment trees and lazy load more similar to posts on Home
+    - Handle various post types (better)
+    - Add header with input/buttons to select other subReddit rather than using URL
 
-    etc.
+    etc.    
 
 ## Available Scripts
 
