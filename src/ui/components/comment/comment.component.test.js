@@ -1,9 +1,8 @@
-import { render } from '@testing-library/react';
 import React from 'react';
-import { unmountComponentAtNode } from 'react-dom';
+import { render, unmountComponentAtNode } from 'react-dom';
 import { act } from 'react-dom/test-utils';
 
-import postCard from './comment.component';
+import Comment from './comment.component';
 
 const testComment = {
   gilded: true,
@@ -11,7 +10,7 @@ const testComment = {
     "I’ve found a few funny memories during lockdown. This is from my 1st tour in 89, backstage in Vegas.",
   author: "ReallyRickAstley",
   created: 1592410647,
-  awards: { gid_1: 28, gid_2: 19, gid_3: 10 },
+  awards: [],
   id: "haucpf",
   ups: 336487,
 };
@@ -31,21 +30,21 @@ describe("(Component) postCard", () => {
     container = null;
   });
 
-  it("renders successfully", () => {
+  it("(Component) Comment renders successfully", () => {
     act(() => {
-      render(<postCard post={testComment} />, container);
-
-      expect(
-        container.querySelector("[data-testid='author']").textContent
-      ).toEqual(testComment.commentTotal);
-
-      expect(
-        container.querySelector('[data-testid="ups"]').textContent
-      ).toEqual(testComment.ups);
-
-      expect(
-        container.querySelector('[data-testid="text"]').textContent
-      ).toEqual(testComment.title);
+      render(<Comment data={testComment} />, container);
     });
+
+    expect(
+      container.querySelector("[data-testid='author']").textContent
+    ).toEqual(testComment.author);
+
+    expect(container.querySelector('[data-testid="ups"]').textContent).toEqual(
+      ` ${testComment.ups} points`
+    );
+
+    expect(container.querySelector('[data-testid="text"]').textContent).toEqual(
+      testComment.text
+    );
   });
 });

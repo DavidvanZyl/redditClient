@@ -1,5 +1,6 @@
 .postCard {
-  width: 80%;
+  width: 60%;
+  max-width: 700px;
   min-width: 320px;
   display: flex;
   flex-direction: column;
@@ -21,16 +22,25 @@
     font-weight: 400;
     line-height: 16px;
     display: flex;
-    flex-flow: row nowrap;
+    flex-flow: row wrap;
     margin: 8px 8px 0;
     position: relative;
     color: rgb(135, 138, 140);
+
+    &__author {
+      margin: 0;
+    }
   }
 
   &__title {
     font-size: 18px;
     font-weight: 500;
     line-height: 22px;
+    margin: 8px;
+  }
+
+  &__url {
+    font-size: 12px;
     margin: 8px;
   }
 
@@ -59,8 +69,12 @@
       display: flex;
       align-items: center;
       justify-content: center;
-      margin-right: 4px;
+      margin: 4px 4px 4px 0;
       padding: 4px;
+
+      & > p {
+        margin: 0;
+      }
     }
   }
 }

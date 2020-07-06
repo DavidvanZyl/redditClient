@@ -2,37 +2,60 @@ import './postCard.component.scss';
 
 import moment from 'moment';
 import React from 'react';
-import { Link, useRouteMatch } from 'react-router-dom';
+import { generatePath, useParams } from 'react-router';
+import { Link } from 'react-router-dom';
+
+import routes from '../../../constants/routes';
+import Awards from '../awards/awards.component';
 
 const PostCard = ({ data }) => {
-  let match = useRouteMatch();
+  let { subReddit } = useParams();
+  const isLinkPost =
+    !data.preview.resolutions && !data.preview.resolutions?.length && data.url;
   return (
-    <Link className="postCard" to={`${match.url}/${data.id}`}>
-      <p className="postCard__meta">
-        {`Posted by u/${data.author} ${moment.unix(data.created).fromNow()}`}
-      </p>
-      <h1 className="postCard__title">{data.title}</h1>
-      <img
-        className="postCard__image"
-        srcSet={data.preview.resolutions
-          .map((src) => `${src.url} ${src.width}w`)
-          .join(", ")}
-        src={data.preview.source.url}
-        alt={"Post preview"}
-        sizes="(max-width: 400px) 300px,
+    <Link
+      className="postCard"
+      to={generatePath(routes.POST, { subReddit, postId: data.id })}
+    >
+      <div className="postCard__meta">
+        <p className="postCard__meta__author" data-testid="meta">
+          {`Posted by u/${data.author} ${moment.unix(data.created).fromNow()}`}
+        </p>
+        <Awards awards={data.awards} />
+      </div>
+      <h1 className="postCard__title" data-testid="title">
+        {data.title}
+      </h1>
+      {isLinkPost ? (
+        <a className="postCard__url" href={data.url}>{`${data.url.slice(
+          0,
+          25
+        )}...`}</a>
+      ) : (
+        <img
+          className="postCard__image"
+          srcSet={data.preview.resolutions
+            .map((src) => `${src.url} ${src.width}w`)
+            .join(", ")}
+          src={data.preview.source.url}
+          alt={"Post preview"}
+          sizes="(max-width: 400px) 300px,
         (max-width: 600px) 480px,
         (max-width: 800px) 600px,
         (max-width: 1000px) 800px
         1000px"
-      />
+        />
+      )}
       <div className="postCard__interactions">
-        <span className="postCard__interactions__interaction">
+        <p className="postCard__interactions__interaction">
           <i className="icon icon-upvote" />
-          {formatInteractionTotals(data.ups)}
-        </span>
+          <span data-testid="ups">{formatInteractionTotals(data.ups)}</span>
+        </p>
         <span className="postCard__interactions__interaction">
           <i className="icon icon-comment" />
-          {`${formatInteractionTotals(data.commentTotal)} Comments`}
+          <p data-testid="commentTotal">{`${formatInteractionTotals(
+            data.commentTotal
+          )} Comments`}</p>
         </span>
       </div>
     </Link>

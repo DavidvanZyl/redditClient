@@ -16,4 +16,5 @@ export const commentInterface = (comment) => ({
   gilded: comment.data.gilded,
   ups: comment.data.ups,
   text: comment.data.body,
+  id: comment.data.id,
 });

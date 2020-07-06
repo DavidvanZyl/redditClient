@@ -5,15 +5,16 @@ import Loader from './loader';
 
 export const withInfiniteScroll = (Component) => (props) => {
   useEffect(() => {
-    const onScroll = throttle(900, () => {
+    const onScroll = () => {
       if (
         window.innerHeight + window.pageYOffset >=
-          document.body.offsetHeight - 500 &&
-        props.items.length
+          (document.body.scrollHeight / 100) * 80 &&
+        props.items.length &&
+        !props.isLoading
       ) {
-        props.fetchMoreItems && props.fetchMoreItems();
+        props.fetchMoreItems && throttle(400, false, props.fetchMoreItems());
       }
-    });
+    };
 
     window.addEventListener("scroll", onScroll, false);
     return () => window.removeEventListener("scroll", onScroll, false);

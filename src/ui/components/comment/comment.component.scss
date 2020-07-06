@@ -12,18 +12,23 @@
     font-weight: 400;
     line-height: 16px;
     color: rgb(135, 138, 140);
-    margin: 8px 0 0;
+    margin: 8px 0 2px;
+    flex-wrap: wrap;
 
     &__name {
       color: black;
       padding-right: 4px;
     }
 
-    & > span {
+    &__space {
       padding: 0 4px;
       &:before {
         content: " \B7 ";
       }
+    }
+
+    & > p {
+      margin: 0;
     }
   }
 
@@ -32,5 +37,6 @@
     font-weight: 400;
     line-height: 21px;
     margin: 0 0 8px;
+    word-break: break-word;
   }
 }

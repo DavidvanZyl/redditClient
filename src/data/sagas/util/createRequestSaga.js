@@ -11,7 +11,6 @@ export const createRequestSaga = (type, request, dataInterface) => {
     );
     try {
       const response = yield call(request, action.payload);
-      console.log(response);
       if (response.data || response.length) {
         yield put({
           type: ACTION_SUCCESS,
@@ -20,6 +19,7 @@ export const createRequestSaga = (type, request, dataInterface) => {
       }
     } catch (error) {
       console.log(error);
+      //TODO: Handle Errors
     }
     yield put(endLoading(type));
   };

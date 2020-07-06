@@ -5,8 +5,20 @@
   align-items: center;
   margin: 32px 0;
 
+  &__header {
+    width: 90%;
+    height: 40px;
+    padding: 0 20px;
+
+    & > a {
+      text-decoration: none;
+      text-transform: uppercase;
+    }
+  }
+
   & .postCard {
     margin-bottom: 32px;
+    cursor: default;
   }
 
   &__comments {
@@ -14,7 +26,9 @@
     border-radius: 5px;
     display: flex;
     flex-direction: column;
-    width: 80%;
+    width: 60%;
+    max-width: 700px;
+    min-width: 320px;
     overflow: hidden;
     padding: 0 8px;
     background-color: white;

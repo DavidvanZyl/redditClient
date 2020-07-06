@@ -5,7 +5,7 @@ import { compose } from 'redux';
 
 import { withInfiniteScroll, withLoading } from '../withInfiniteScroll';
 
-const InfiniteScrollList = ({ items, Component, className }) => {
+export const ComponentList = ({ items, Component, className }) => {
   return (
     <div className="InfiniteScrollList">
       <div className={className}>
@@ -15,4 +15,7 @@ const InfiniteScrollList = ({ items, Component, className }) => {
   );
 };
 
-export default compose(withInfiniteScroll, withLoading)(InfiniteScrollList);
+export const LazyLoadInfiniteList = compose(
+  withInfiniteScroll,
+  withLoading
+)(ComponentList);
