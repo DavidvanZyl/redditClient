@@ -11,7 +11,7 @@ In future:
    * Handle various post types (better)
    * Add header with input/buttons to select other subReddit rather than using URL
 
-    etc.    
+etc.    
 
 ## Available Scripts
 
